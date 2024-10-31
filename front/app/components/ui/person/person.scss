@@ -1,0 +1,57 @@
+.person {
+    background: gray;
+    border-radius: 8px; /* ボーダー半径を小さく */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* シャドウを軽く */
+    padding: 12px; /* パディングを小さく */
+    margin: 10px;
+    max-width: 250px; /* 幅を小さく */
+    transition: transform 0.2s;
+}
+
+.person:hover {
+    transform: scale(1.02); /* ホバー時のスケールを少し小さく */
+}
+
+.name {
+    font-size: 1.2em; /* フォントサイズを小さく */
+    font-weight: bold;
+    margin-bottom: 6px; /* マージンを小さく */
+    text-align: center;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左揃えに変更 */
+    margin-bottom: 6px; /* マージンを小さく */
+}
+
+.img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px; /* 画像の幅を小さく */
+    height: 50px; /* 画像の高さを小さく */
+    margin-right: 8px; /* マージンを小さく */
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.attribute {
+    font-size: 1em; /* フォントサイズを小さく */
+    color: #555;
+    flex-grow: 1; /* スペースを均等に分ける */
+    text-align: left; /* テキストを左揃えに */
+}
+
+.comment {
+    font-size: 0.8em; /* フォントサイズを小さく */
+    color: #777;
+    line-height: 1.2; /* 行間を少し狭く */
+    background-color: #f9f9f9;
+    padding: 8px; /* パディングを小さく */
+    border-radius: 4px; /* ボーダー半径を小さく */
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+.message {
+    display: flex;
+    flex-direction: column; /* 縦方向に配置 */
+    background-color: #130b21;
+    margin:0;
+
+    .sticky-message {
+        position: sticky; /* スティッキーに設定 */
+        top: 0; /* 上部に固定 */
+        z-index: 1000; /* 他の要素の上に表示 */
+    }
+
+    .sticky-layout {
+        position: sticky; /* スティッキーに設定 */
+        top: 0; /* 上部に固定 */
+        z-index: 999; /* 他の要素の上に表示 */
+    }
+}

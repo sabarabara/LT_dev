@@ -1,0 +1,64 @@
+.message_r {
+    display: flex; // アイコンとテキストエリアを横並びにする
+    align-items: flex-start; // アイコンをテキストエリアの上部に合わせる
+    margin: 1.5em 0; // 上下のマージンを追加
+    flex-direction: row-reverse;
+
+    .message-icon {
+        width: 50px; // アイコンの幅を指定
+        height: 50px; // アイコンの高さを指定
+        margin-left: 10px; // アイコンとテキストエリアの間にスペースを追加
+    }
+
+    .balloon2-right {
+        position: relative;
+        display: inline-block;
+        padding: 7px 10px;
+        min-width: 120px;
+        max-width: 100%;
+        color: #555;
+        font-size: 16px;
+        background: #FFF;
+        border: solid 3px #555;
+        box-sizing: border-box;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            margin-top: -12px;
+            border: 12px solid transparent;
+            border-left: 12px solid #FFF;
+            z-index: 2;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            margin-top: -14px;
+            border: 14px solid transparent;
+            border-left: 14px solid #555;
+            z-index: 1;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .message-textarea {
+        width: 100%;
+        height: auto;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: inherit;
+        font-size: inherit;
+    }
+}

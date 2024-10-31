@@ -1,0 +1,65 @@
+.message_l {
+    display: flex; // アイコンとテキストエリアを横並びにする
+    align-items: flex-start; // アイコンをテキストエリアの上部に合わせる
+    margin: 1.5em 0; // 上下のマージンを追加
+    background-color: gray;
+
+    .message-icon {
+        width: 50px; // アイコンの幅を指定
+        height: 50px; // アイコンの高さを指定
+        margin-right: 10px; // アイコンとテキストエリアの間にスペースを追加
+    }
+
+    .balloon2-left {
+        position: relative;
+        display: inline-block;
+        margin: 1.5em 15px 1.5em 0; // 左側のマージンを修正
+        padding: 7px 10px;
+        min-width: 120px;
+        max-width: 100%;
+        color: #555;
+        font-size: 16px;
+        background: #FFF;
+        border: solid 3px #555;
+        box-sizing: border-box;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -24px;
+            margin-top: -12px;
+            border: 12px solid transparent;
+            border-right: 12px solid #FFF;
+            z-index: 2;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            margin-top: -14px;
+            border: 14px solid transparent;
+            border-right: 14px solid #555;
+            z-index: 1;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .message-textarea {
+        width: 100%; // 幅を親要素に合わせる
+        height: auto; // 高さを自動に設定
+        white-space: pre-wrap; // 折り返しを有効にする
+        overflow-wrap: break-word; // 単語の途中で折り返す
+        border: none; // ボーダーを消す
+        outline: none; // フォーカス時のアウトラインを消す
+        background: transparent; // 背景を透明にする
+        color: inherit; // 親要素の色を引き継ぐ
+        font-size: inherit; // 親要素のフォントサイズを引き継ぐ
+    }
+}

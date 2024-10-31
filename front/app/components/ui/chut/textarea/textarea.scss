@@ -1,0 +1,58 @@
+.textarea {
+    width: 78%;
+    position: fixed; // 画面の下に固定
+    bottom: 0; // 画面の下部に配置
+    right: 0; // 右端に配置
+    background-color:#090413; // 背景色
+    border-top: 1px solid #ccc; // 上部にボーダー
+    padding: 10px; // 内側の余白
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); // 上部に影を付ける
+
+    z-index: 1000; // 他の要素の上に表示
+
+    .container {
+        display: flex; // フレックスボックスで横並びに
+        align-items: center; // 縦方向の中央揃え
+        width: 100%; // 幅を100%に設定
+
+        .textinput {
+            flex: 1; // 残りのスペースを占有
+            margin-right: 3px; // ボタンとの間に余白
+            
+            textarea {
+                background-color: #e8e8f7;
+                width: 92%; // 幅を100%に設定
+                height: 5px; // 高さを少し小さく設定
+                padding: 10px; // 内側の余白を調整
+                border: 1px solid #ccc; // ボーダーの設定
+                border-radius: 4px; // 角を丸める
+                resize: none; // リサイズを無効にする
+                font-size: 10px; // フォントサイズ
+                color: #333; // テキストの色
+                transition: border-color 0.3s; // ボーダーの遷移
+
+                &:focus {
+                    outline: none; // フォーカス時のアウトラインを無効にする
+                    border-color: #007bff; // フォーカス時のボーダー色
+                }
+            }
+        }
+
+        .submit {
+            button {
+                padding: 8px 10px; // ボタンの内側の余白
+                border: none; // ボタンのボーダーを無効にする
+                border-radius: 4px; // ボタンの角を丸める
+                background-color: #e8e8f7; // ボタンの背景色
+                color: #090413; // ボタンのテキストの色
+                font-size: 16px; // フォントサイズ
+                cursor: pointer; // カーソルをポインターにする
+                transition: background-color 0.3s; // 背景色の遷移
+
+                &:hover {
+                    background-color: #d3d3f7; // ホバー時の背景色
+                }
+            }
+        }
+    }
+}

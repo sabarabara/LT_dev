@@ -1,0 +1,23 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .content {
+        display: flex;
+        flex: 1;
+        overflow: hidden; // コンテンツが溢れた場合にスクロールするように
+
+        // Boxを左側に配置
+        .Box {
+            flex: 0 0 100px; // 固定幅
+            overflow-y: auto;
+        }
+
+        // 右側のコンテンツ
+        .main-content {
+            flex: 1; // 残りのスペースを占める
+            padding: 20px;
+        }
+    }
+}

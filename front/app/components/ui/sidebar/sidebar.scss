@@ -1,0 +1,50 @@
+// components/ui/sidebar/box.scss
+.Sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #090413;
+    padding: 50px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 77%;
+    transform: translateX(-100%); // 初期状態で隠す
+    transition: transform 0.3s ease; // スライドアニメーション
+    z-index: 1000;
+
+    &.visible {
+        transform: translateX(0); // 表示時にスライドイン
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #CD0E7A;
+        margin-bottom: 16px;
+    }
+
+    .date {
+        display: block;
+        gap: 10px;
+    }
+
+    .date-item {
+        background-color: #e8e8f7;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+        color: #090413;
+
+        &:hover {
+            background-color: #d3d3f7;
+        }
+    }
+}
