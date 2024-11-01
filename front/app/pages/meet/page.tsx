@@ -7,6 +7,7 @@ import Person from "@/app/components/ui/person/person";
 import Person_popup from "@/app/components/ui/person_popup/person_popup";
 import Header from "@/app/components/layout/header/page";
 import Sidebar from "@/app/components/ui/sidebar/sidebar";
+import { getmonth } from "@/app/hooks/getdate/getdate";
 
 export default function meet(){
     const [isSidebarVisible, setIsSidebarVisible] = useState(true);
@@ -16,7 +17,7 @@ export default function meet(){
             <Header name="meet"/>
             <Sidebar
                 name="date"
-                date={[{ month: 'Jan', day: 1 }, { month: 'Feb', day: 2 }]}
+                date={getmonth()}
                 isVisible={isSidebarVisible}
             />
 

@@ -5,6 +5,7 @@ import Layout from "@/app/components/layout/layout";
 import Message from "@/app/components/ui/chut/message";
 
 import Sidebar from "@/app/components/ui/sidebar/sidebar";
+import { getmonth } from "@/app/hooks/getdate/getdate";
 
 export default function MessagePage() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -19,6 +20,7 @@ export default function MessagePage() {
         setIsSidebarVisible(false);
     };
 
+
     return (
         <div
             className="message"
@@ -27,7 +29,7 @@ export default function MessagePage() {
         >
             <Sidebar
                 name="date"
-                date={[{ month: 'Jan', day: 1 }, { month: 'Feb', day: 2 }]}
+                date={getmonth()}
                 isVisible={isSidebarVisible}
             />
 
