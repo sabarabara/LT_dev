@@ -1,8 +1,10 @@
+require('module-alias/register'); // module-aliasの設定を追加
+
 const express = require('express');
 const mysql = require('mysql2/promise');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',

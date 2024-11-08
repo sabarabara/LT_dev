@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # サーバーを3000ポートでリッスン
-EXPOSE 3000
+EXPOSE 5000
 
 # サーバーを起動
 CMD ["node", "server.js"]
